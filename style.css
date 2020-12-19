@@ -1,0 +1,20 @@
+ul {
+    list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#gallery li:not(:last-child) {
+  margin-right: 40px;
+}

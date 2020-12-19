@@ -5,7 +5,10 @@ const checkInputLength = () => inputRef.value.length === countOfSymbols
     ? inputRef.classList.add('valid')
     : inputRef.classList.add('invalid');
 
-const inputFocus = () => inputRef.classList.remove('valid', 'invalid');
+const inputFocus = (event) => {
+    // event.target.value = ''; чи варто добавляти це значення?
+    inputRef.classList.remove('valid', 'invalid');
+};
 
 inputRef.addEventListener('blur', checkInputLength);
 inputRef.addEventListener('focus', inputFocus);

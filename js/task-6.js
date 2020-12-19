@@ -1,3 +1,16 @@
+const inputRef = document.querySelector('#validation-input');
+const countOfSymbols = Number(inputRef.dataset.length);
+
+const checkInputLength = () => inputRef.value.length === countOfSymbols
+    ? inputRef.classList.add('valid')
+    : inputRef.classList.add('invalid');
+
+const inputFocus = () => inputRef.classList.remove('valid', 'invalid');
+
+inputRef.addEventListener('blur', checkInputLength);
+inputRef.addEventListener('focus', inputFocus);
+
+
 // Напиши скрипт, который бы при потере фокуса на инпуте, проверял его содержимое на правильное количество символов.
 
 // < input

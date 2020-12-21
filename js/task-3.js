@@ -21,8 +21,11 @@ const galleryRef = document.querySelector("#gallery");
 galleryRef.classList.add("js-gallery");  
 
 const stringToInsertImg = images.map(
- (item) => `<li><img src="${item.url}" alt="${item.alt}"></li>`
- );
+    (item) => `<li><img src="${item.url}" alt="${item.alt}"></li>`
+).join(' ');
+
+console.log(stringToInsertImg);
+
 
 galleryRef.insertAdjacentHTML("afterbegin", stringToInsertImg);
 
